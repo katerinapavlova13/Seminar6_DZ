@@ -13,6 +13,12 @@ int b2 = Convert.ToInt32(Console.ReadLine());
 Console.Write("Введите значение k2: ");
 int k2 = Convert.ToInt32(Console.ReadLine());
 
+if(k1==k2) 
+{
+    Console.Write("Прямые параллельны!");
+    return;
+}
+
 void IntersectionPoint(int b1, int k1, int b2, int k2)
 {
     double x = 0;
