@@ -14,9 +14,10 @@ int b2 = Convert.ToInt32(Console.ReadLine());
 Console.Write("Введите значение k2: ");
 int k2 = Convert.ToInt32(Console.ReadLine());
 
-if (b2 == b1 || k1 == k2)
+if (b2 == b1 && k1 == k2)
 {
     Console.Write("Прямые совпадают!");
+    return;
 }
 else if (k1 == k2)
 {
