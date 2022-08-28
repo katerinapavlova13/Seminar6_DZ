@@ -4,6 +4,7 @@
 
 b1 = 2, k1 = 5, b2 = 4, k2 = 9 -> (-0,5; -0,5)*/
 
+
 Console.Write("Введите значение b1: ");
 int b1 = Convert.ToInt32(Console.ReadLine());
 Console.Write("Введите значение k1: ");
@@ -13,12 +14,15 @@ int b2 = Convert.ToInt32(Console.ReadLine());
 Console.Write("Введите значение k2: ");
 int k2 = Convert.ToInt32(Console.ReadLine());
 
-if(k1==k2) 
+if (b2 == b1 || k1 == k2)
+{
+    Console.Write("Прямые совпадают!");
+}
+else if (k1 == k2)
 {
     Console.Write("Прямые параллельны!");
     return;
 }
-
 void IntersectionPoint(int b1, int k1, int b2, int k2)
 {
     double x = 0;
@@ -26,6 +30,6 @@ void IntersectionPoint(int b1, int k1, int b2, int k2)
     y = k1 * x + b1;
     x = -(b1 - b2) / (k1 - k2);
 
-    Console.Write($"{x}, {y}");
+    Console.Write($"{Math.Round(x, 3, MidpointRounding.AwayFromZero)}, {Math.Round(y, 3, MidpointRounding.AwayFromZero)}");
 }
 IntersectionPoint(b1, k1, b2, k2);
